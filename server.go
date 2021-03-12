@@ -34,8 +34,8 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		test := db.Select("*")
-		w.Write([]byte(fmt.Sprintf("Hello %v from World, rows affected %v", name, test.RowsAffected)))
+		pingMySQL := db.Select("*")
+		w.Write([]byte(fmt.Sprintf("Hello %v from World, rows affected %v", name, pingMySQL.RowsAffected)))
 	})
 
 	server := http.Server{
