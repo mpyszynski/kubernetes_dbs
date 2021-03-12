@@ -24,11 +24,6 @@ spec:
               secretKeyRef:
                 name: test-secrets
                 key: name
-          - name: MONGODB_URL
-            valueFrom:
-              configMapKeyRef:
-                name: mongodb-config
-                key: database-url
 ---
 apiVersion: v1
 kind: Service
